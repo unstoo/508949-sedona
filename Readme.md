@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Yevgeny Kozlov](https://up.htmlacademy.ru/htmlcss/20/user/508949).
-* Наставник: `Михаил Москалев`.
+* Наставник: [Михаил Москалев](https://htmlacademy.ru/profile/mosk).
 
 ---
 
