@@ -68,18 +68,38 @@
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
-      </section>
+      </section>    
       <section class='booking-section'>
         <h2>Hotels booking</h2>
         <b>Заинтерисовались?</b>
         <p>Укажите предпологаемые даты поездки,<br>
           и мы покажем вам лучшие предложения в Седоне
         </p>
-        <span class='big-button'>Поиск гостиницы в Седоне</span>
+        <button class='big-brown-button'>Поиск гостиницы в Седоне</button>
         <figure class='google-map'>
           <img src='img/google-map.jpg' width='1200' height='593' alt='US, Arizona, Sedona. Coordinates: 34°51′36″N 111°47′21″W'>
         </figure>
-        <!-- Форма букинга -->
+        <form class='booking-form' action='https://echo.htmlacademy.ru/' method='post'>
+          <fieldset>
+            <legend class='visually-hidden'>Поск гостиницы в седоне</legend>
+            <label for='booking-start-date-field'>Дата заезда:</label>
+            <input  id='booking-start-date-field' type='date' name='start-date'>
+            <label for='booking-end-date-field'>Дата выезда:</label>
+            <input  id='booking-end-date-field' type='date' name='end-date'>
+            
+            <label for='booking-adults-count'>Взрослые:</label>
+            <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество взрослых</span></button>
+            <input  id='booking-adults-count' name='adults-count' type='number' min='0' max='4' step='1'>
+            <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество взрослых</span></button>
+  
+            <label for='booking-kids-count'>Дети:</label>
+            <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество детей</span></button>
+            <input  id='booking-kids-count' name='kids-count' type='number' min='0' max='8' step='1'>
+            <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество детей</span></button>
+  
+            <button class='big-blue-button' type='submit'>Найти</button>
+          </fieldset>
+        </form>
       </section>
     </main>
     <footer class='main-footer'>

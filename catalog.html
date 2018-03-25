@@ -18,7 +18,54 @@
     </header>
     <main>
       <h1 class='visually-hidden'>Результат поиска жилья</h1>
-      <!-- Форма и фильтры поиска жилья -->
+      <form class='catalog-search-form' method='post' action='https://echo.htmlacademy.ru/'
+      oninput='min.value=catalog_price_min.value; max.value=catalog_price_max.value;'>
+
+        <fieldset>
+          <legend>Инфрастуктура:</legend>
+          <input  id='catalog-option-swimmingpool' type='checkbox' name='option-swimmingpool'>
+          <label for='catalog-option-swimmingpool'>Бассейн</label>
+          <input  id='catalog-option-parking' type='checkbox' name='option-parking'>
+          <label for='catalog-option-parking'>Парковка</label>
+          <input  id='catalog-option-wifi' type='checkbox' name='option-wifi'>
+          <label for='catalog-option-wifi'>Wi-Fi</label>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <input  id='catalog-type-hotel' type='checkbox' name='type-hotel'>
+          <label for='catalog-type-hotel'>Гостиница</label>
+          <input  id='catalog-type-motel' type='checkbox' name='type-motel'>
+          <label for='catalog-type-motel'>Мотель</label>
+          <input  id='catalog-type-appartment' type='checkbox' name='type-appartment'>
+          <label for='catalog-type-appartment'>Апартаменты</label>
+        </fieldset>
+        <fieldset>
+          <legend>Стоимость в сутки (Р):</legend>
+          <label for='catalog_price_min'>От</label>
+          <output for='ccatalog_price_min' name='min'>0</output>
+          <label for='ccatalog_price_max'>До</label>
+          <output for='catalog_price_max' name='max'>10000</output>
+          <!-- Нужна помощь, чтобы понять, как тут думать по хтмл-семантичному-феншую. Не понимаю, как анализировать. ;) -->
+          
+          <input id='catalog_price_min' name='price-min' type='range' min='0' max='10000' value='0'>
+          <input id='catalog_price_max' name='price-max' type='range' min='0' max='10000' value='10000'>
+        </fieldset>
+        <button class='catalog-search-button' type='submit'>Показать</button>
+      </form>
+      <section>
+        <h2 class='visually-hidden'>Сортировка результатов поиска</h2>
+        <span class='search-result-count'>Найдено: <span class='search-result-count-number'>3</span></span>
+
+        <span>Сортировка:</span>
+        <button>По цене</button>
+        <button>По типу</button>
+        <button>По рейтингу</button>
+
+        <button><span class='visually-hidden'>По возрастанию</span></button>
+        <button><span class='visually-hidden'>По убыванию</span></button>
+        
+
+      </section>
       <ul class='hotels-search-result-list'>
         <li>
           <article class='hotel-search-result-item'>  
@@ -27,13 +74,13 @@
             <table>
               <tr>
                 <td class='hotel-search-name'>Amara Resort & SPA</td>
-                <td class='hotel-search-stars'></td>
+                <td class='hotel-search-stars' aria-label='Количество звезд'><span class='visually-hidden'>4</span></td>
                 <td class='hotel-search-type'>Гостиница</td>
                 <td class='hotel-search-rating'>Рейтинг: 8,5</td>
               </tr>
             </table>
-            <span class='blue-button'>Подробнее</span>
-            <span class='brown-button'>Забронировать</span>
+            <a class='blue-button' href='#'>Подробнее</a>
+            <a class='brown-button' href='#'>Забронировать</a>
           </article>
           <li>
             <article class='hotel-search-result-item'>  
@@ -42,13 +89,13 @@
               <table>
                 <tr>
                   <td class='hotel-search-name'>Desert Quail Inn</td>
-                  <td class='hotel-search-stars'></td>
+                  <td class='hotel-search-stars' aria-label='Количество звезд'><span class='visually-hidden'>3</span></td>
                   <td class='hotel-search-type'>Мотель</td>
                   <td class='hotel-search-rating'>Рейтинг: 8,9</td>
                 </tr>
               </table>
-              <span class='blue-button'>Подробнее</span>
-              <span class='brown-button'>Забронировать</span>
+              <a class='blue-button' href='#'>Подробнее</a>
+              <a class='brown-button' href='#'>Забронировать</a>
             </article>
           <li>
             <article class='hotel-search-result-item'>  
@@ -57,13 +104,13 @@
               <table>
                 <tr>
                   <td class='hotel-search-name'>Villas at Poco Diablo</td>
-                  <td class='hotel-search-stars'></td>
+                  <td class='hotel-search-stars' aria-label='Количество звезд'><span class='visually-hidden'>2</span></td>
                   <td class='hotel-search-type'>Апартаменты</td>
                   <td class='hotel-search-rating'>Рейтинг: 9,2</td>
                 </tr>
               </table>
-              <span class='blue-button'>Подробнее</span>
-              <span class='brown-button'>Забронировать</span>
+              <a class='blue-button' href='#'>Подробнее</a>
+              <a class='brown-button' href='#'>Забронировать</a>
             </article>
         </li>
       </ul>
