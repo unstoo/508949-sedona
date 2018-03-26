@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+  text-transform: uppercase;
+
+  background-color: white;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px; width: 1px; 
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.main-navigation a  {
+  font-weight: bold;
+  color: #000000;
+}
+
+.main-navigation a:hover  {
+  color: #81b3d2;
+}
+
+.main-navigation a:active {
+  color: #000000;
+  opacity: .3;
+}
+
+
+.promo-text {
+  text-align: center;
+}
+
+.promo-text b {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.sedona-pros-list {
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
+.sedona-pros-list ul {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.sedona-pros-list h4 {
+  color: #000000;
+}
+
+.sedona-pros-list h3, .sedona-pros-list h4 {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.pro-order-number::before, .pro-order-number::after {
+  content: '—'
+}
+
+.sedona-pros-list div {
+  background-color: #eeeeee;
+  color: #333333;
+}
+
+.sedona-pros-list div h3 {
+  color: #000000;
+}
+
+.booking-section {
+  text-align: center;
+}
+.booking-section b {
+  font-size: 24px;
+  color: #000000;
+}
+
+.big-brown-button {
+  background-color: #766357;
+
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  border: none;
+  margin-bottom: 0;
+}
+
+.google-map {
+  margin: 0;
+  padding: 0;
+}
+
+.booking-form {
+  color: #000000;
+  font-weight: bold;
+}
+.booking-form fieldset {
+  border: none;
+}
+
+.big-blue-button {
+  background-color: #81b3d2;
+
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  border: none;
+  margin: 0;
+}
+
+.hashtag {
+  color: #000000;
+  font-size: 21px;
+  font-weight: bold;
+}
