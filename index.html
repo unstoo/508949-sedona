@@ -90,20 +90,32 @@
         <form class='booking-form' action='https://echo.htmlacademy.ru/' method='post'>
           <fieldset>
             <legend class='visually-hidden'>Поск гостиницы в седоне</legend>
-            <label for='booking-start-date-field'>Дата заезда:</label>
-            <input  id='booking-start-date-field' type='date' name='start-date'>
-            <label for='booking-end-date-field'>Дата выезда:</label>
-            <input  id='booking-end-date-field' type='date' name='end-date'>
+            <div>
+              <div class='date-group'>
+                <label for='booking-start-date-field'>Дата заезда:</label>
+                <input  id='booking-start-date-field' type='date' name='start-date'>
+              </div>
+              <div class='date-group'>
+                <label for='booking-end-date-field'>Дата выезда:</label>
+                <input  id='booking-end-date-field' type='date' name='end-date'>
+              </div>
+            </div>
             
-            <label for='booking-adults-count'>Взрослые:</label>
-            <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество взрослых</span></button>
-            <input  id='booking-adults-count' name='adults-count' type='number' min='0' max='4' step='1'>
-            <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество взрослых</span></button>
-  
-            <label for='booking-kids-count'>Дети:</label>
-            <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество детей</span></button>
-            <input  id='booking-kids-count' name='kids-count' type='number' min='0' max='8' step='1'>
-            <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество детей</span></button>
+            <div class='number-group-parent'>
+              <div class='number-group'>
+                  <label for='booking-adults-count'>Взрослые:</label>
+                <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество взрослых</span></button>
+                <input  id='booking-adults-count' name='adults-count' type='text' min='0' max='4' step='1' value='0'>
+                <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество взрослых</span></button>
+              </div>
+              
+              <div class='number-group'>
+                  <label for='booking-kids-count'>Дети:</label>
+                <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество детей</span></button>
+                <input  id='booking-kids-count' name='kids-count' type='text' min='0' max='8' step='1' value='0'>
+                <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество детей</span></button>
+              </div>
+          </div>
   
             <button class='big-blue-button' type='submit'>Найти</button>
           </fieldset>
