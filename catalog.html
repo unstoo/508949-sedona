@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class='catalog-page'>
     <header class='main-header'>
       <nav class='main-navigation'>
         <ul class='site-navigation'>
@@ -43,10 +43,16 @@
         </fieldset>
         <fieldset>
           <legend>Стоимость в сутки (Р):</legend>
-          <label for='catalog_price_min'>От</label>
-          <output for='ccatalog_price_min' name='min'>0</output>
-          <label for='catalog_price_max'>До</label>
-          <output for='catalog_price_max' name='max'>10000</output>
+          <div class='minmax-group'>
+            <div class='minmax-cell'>
+              <label for='catalog_price_min'>От</label>
+              <output for='ccatalog_price_min' name='min'>0</output>
+            </div>
+            <div class='minmax-cell'>
+              <label for='catalog_price_max'>До</label>
+              <output for='catalog_price_max' name='max'>10000</output>
+            </div>
+          </div>
           <!-- Нужна помощь, чтобы понять, как тут думать по хтмл-семантичному-феншую. Не понимаю, как анализировать. ;) -->
           
           <input id='catalog_price_min' name='price-min' type='range' min='0' max='10000' value='0'>
@@ -54,9 +60,9 @@
         </fieldset>
         <button class='catalog-search-button' type='submit'>Показать</button>
       </form>
-      <section>
+      <section class='filters'>
         <h2 class='visually-hidden'>Сортировка результатов поиска</h2>
-        <span class='search-result-count'>Найдено: <span class='search-result-count-number'>3</span></span>
+        <span class='search-result-count'>Найдено: 3</span>
 
         <span>Сортировка:</span>
         <a href='#'>По цене</a>
@@ -118,7 +124,7 @@
       </ul>
     </main>
     <footer class='main-footer'>
-      <span class='footer-hashtag'>#VISITSEDONA</span>
+      <span class='hashtag'>#VISITSEDONA</span>
       <ul class='social-links'>
         <li><a href='#'>Twitter</a></li>
         <li><a href='#'>Facebook</a></li>
