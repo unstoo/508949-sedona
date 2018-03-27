@@ -87,39 +87,6 @@
         <figure class='google-map'>
           <img src='img/google-map.jpg' width='1200' height='593' alt='US, Arizona, Sedona. Coordinates: 34°51′36″N 111°47′21″W'>
         </figure>
-        <form class='booking-form' action='https://echo.htmlacademy.ru/' method='post'>
-          <fieldset>
-            <legend class='visually-hidden'>Поск гостиницы в седоне</legend>
-            <div>
-              <div class='date-group'>
-                <label for='booking-start-date-field'>Дата заезда:</label>
-                <input  id='booking-start-date-field' type='date' name='start-date'>
-              </div>
-              <div class='date-group'>
-                <label for='booking-end-date-field'>Дата выезда:</label>
-                <input  id='booking-end-date-field' type='date' name='end-date'>
-              </div>
-            </div>
-            
-            <div class='number-group-parent'>
-              <div class='number-group'>
-                  <label for='booking-adults-count'>Взрослые:</label>
-                <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество взрослых</span></button>
-                <input  id='booking-adults-count' name='adults-count' type='text' min='0' max='4' step='1' value='0'>
-                <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество взрослых</span></button>
-              </div>
-              
-              <div class='number-group'>
-                  <label for='booking-kids-count'>Дети:</label>
-                <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество детей</span></button>
-                <input  id='booking-kids-count' name='kids-count' type='text' min='0' max='8' step='1' value='0'>
-                <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество детей</span></button>
-              </div>
-          </div>
-  
-            <button class='big-blue-button' type='submit'>Найти</button>
-          </fieldset>
-        </form>
       </section>
     </main>
     <footer class='main-footer'>
@@ -131,8 +98,42 @@
         <li><a href='#'><span class='visually-hidden youtube-icon'>YouTube</span></a></li>
       </ul>
       <a href='http://htmlacademy.ru/intensive/htmlcss'>
-        <img src='img/logo-htmlacademy.svg' width='115' height='41' alt='Логотип htmlacademy'>
+        <img class='html-logo' src='img/logo-htmlacademy.svg' width='115' height='41' alt='Логотип htmlacademy'>
       </a>
     </footer>
+    <br>
+    <form class='booking-form' action='https://echo.htmlacademy.ru/' method='post'>
+      <fieldset>
+        <legend class='visually-hidden'>Поск гостиницы в седоне</legend>
+        <div>
+          <div class='date-group'>
+            <label for='booking-start-date-field'>Дата заезда:</label>
+            <input  id='booking-start-date-field' type='date' name='start-date'>
+          </div>
+          <div class='date-group'>
+            <label for='booking-end-date-field'>Дата выезда:</label>
+            <input  id='booking-end-date-field' type='date' name='end-date'>
+          </div>
+        </div>
+        
+        <div class='number-group-parent'>
+          <div class='number-group'>
+              <label for='booking-adults-count'>Взрослые:</label>
+            <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество взрослых</span></button>
+            <input  id='booking-adults-count' name='adults-count' type='text' min='0' max='4' step='1' value='0'>
+            <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество взрослых</span></button>
+          </div>
+          
+          <div class='number-group'>
+              <label for='booking-kids-count'>Дети:</label>
+            <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество детей</span></button>
+            <input  id='booking-kids-count' name='kids-count' type='text' min='0' max='8' step='1' value='0'>
+            <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество детей</span></button>
+          </div>
+      </div>
+
+        <button class='big-blue-button' type='submit'>Найти</button>
+      </fieldset>
+    </form>
   </body>
 </html>

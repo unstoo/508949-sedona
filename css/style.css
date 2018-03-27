@@ -1,6 +1,7 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  width: 1200px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -108,6 +109,14 @@ ul {
   height: 86px;
 }
 
+.big-brown-button:hover {
+  background-color: #604e43;
+}
+.big-brown-button:active {
+  background-color: #503e33;
+  color: rgba(255,255,255,.3);
+}
+
 .google-map {
   margin: 0;
   padding: 0;
@@ -157,9 +166,13 @@ ul {
   font-weight: bold;
   font-size: 14px;
 }
-
-.booking-form input[type='text'] {
-  padding: 15px;
+.booking-form input[type='date']:hover {
+  background-color: #ebebeb;
+}
+.booking-form input[type='date']:focus {
+  background-color: #ffffff;
+  border: solid 2px #e5e5e5;
+  outline: none;
 }
 
 .booking-form input[type='text'], .booking-form button[type='button']  {
@@ -171,12 +184,30 @@ ul {
   font-size: 14px;
 }
 
+.booking-form input[type='text'] {
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+
 
 .increment-button, .decrement-button {
   background-color: #f2f2f2;
   border: none;
 
   color: #a9a9a9;
+}
+.increment-button:hover, .decrement-button:hover {
+  background-color: #f2f2f2;
+  border: none;
+
+  color: #000000;
+}
+.increment-button:active, .decrement-button:active {
+  background-color: #f2f2f2;
+  border: none;
+
+  color: #81b3d2;
 }
 
 .increment-button::after {
@@ -214,7 +245,15 @@ ul {
   margin-top: 54px;
   width: 458px;
   height: 58px;
-  }
+}
+
+.big-blue-button:hover {
+  background-color: #669ec0;
+}
+.big-blue-button:active {
+  background-color: #5496bd;
+  color: rgba(255,255,255,.3);
+}
   
 
 .hashtag {
@@ -324,6 +363,12 @@ section.filters a .selected-filter {
   font-size: 21px;
   font-weight: bold;
 }
+.hotel-search-name:hover {
+  color: #81b3d2;
+}
+.hotel-search-name:active {
+  color: #cacaca;
+}
 
 .hotel-search-rating {
   width: 110px;
@@ -372,4 +417,14 @@ section.filters a .selected-filter {
 .brown-button:active {
   background-color: #503e33;
   color: rgba(255,255,255,.3);
+}
+
+.html-logo a {
+  color: #231f20; 
+}
+.html-logo:hover a {
+  color: #81b3d2;
+}
+.html-logo:active a {
+  color: #bdbbbc;
 }
