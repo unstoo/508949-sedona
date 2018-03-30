@@ -9,7 +9,7 @@ body {
   color: #333333;
   text-transform: uppercase;
 
-  background-color: white;
+  background-color: #f2f2f2;
 
 }
 
@@ -45,50 +45,157 @@ ul {
   opacity: .3;
 }
 
+.site-navigation {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  min-height: 57px;
+  align-items: center;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+.site-navigation > div {
+  display: flex;
+}
+
+
+.site-navigation  li:first-child, .site-navigation > li:last-child {
+  width: 241px;
+}
+.site-navigation  li:last-child {
+  text-align: right;
+}
+
+.intro-logo {
+  height: 513px;
+  width: 1200px;
+  background-color: #a6c6dc;
+}
+
+main {
+  background-color: #ffffff;
+}
+
+
 
 .promo-text {
+  margin: 0;
+  background-color: #ffffff;
+
   text-align: center;
+}
+
+.promo-text-section {
+  min-height: 212px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.promo-text-section > p:last-child {
+  margin-bottom: 57px;
+  margin-top: 30px;
 }
 
 .promo-text b {
   font-size: 21px;
   font-weight: bold;
+
+  margin: 0;
 }
 
 .sedona-pros-list {
+  text-align: center;
+}
+
+.first-pro, .second-pro {
+  display: flex;
   background-color: #81b3d2;
   color: #ffffff;
 }
 
-.sedona-pros-list ul {
-  background-color: #ffffff;
-  color: #333333;
+.second-pro > div {
+  order: 3;
 }
 
-.sedona-pros-list h4 {
-  color: #000000;
+.pro-text-group {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 44px;
+  padding-bottom: 60px;
+}
+
+.pro-text-group p {
+  margin: 0;
+}
+
+.sedona-pros-sublist {
+  color: #333333;
+  
+  background-color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 85px;
+  min-height: 330px;
+  box-sizing: border-box;
+}
+.sedona-pros-sublist p {
+  margin: 0;
 }
 
 .sedona-pros-list h3, .sedona-pros-list h4 {
   font-size: 21px;
   font-weight: bold;
+
+  margin: 0;
 }
 
 .pro-order-number::before, .pro-order-number::after {
   content: '—'
 }
 
-.sedona-pros-list div {
-  background-color: #eeeeee;
+.remaining-pros {
   color: #333333;
+
+  background-color: #eeeeee;;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  min-height: 256px;
+
+  padding-top: 45px;
+  padding-bottom: 62px;
 }
 
-.sedona-pros-list div h3 {
-  color: #000000;
+.remaining-pros p {
+  margin: 0;
 }
+
+.remaining-pros li {
+  width: 400px;
+}
+
+
 
 .booking-section {
   text-align: center;
+  box-sizing: border-box;
+  min-height: 291px;
+  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.booking-section p {
+  margin: 0;
+  padding-bottom: 15px
 }
 .booking-section b {
   font-size: 24px;
@@ -120,6 +227,18 @@ ul {
 .google-map {
   margin: 0;
   padding: 0;
+
+  height: 473px;
+}
+
+.main-footer {
+  min-height: 120px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-left: 72px;
+  padding-right: 72px;
+  justify-content: space-between;
 }
 
 .booking-form {
