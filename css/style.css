@@ -627,10 +627,14 @@ main {
 .search-result-count {
   font-size: 21px;
   font-weight: bold;
+  color: #000;
+
   margin-right: 44px;
 }
 .filters span:nth-child(2) {
   margin-right: 36px;
+
+  color: #000;
 }
 .filter-types a:nth-of-type(1) {
   margin-right: 30px;
@@ -745,6 +749,7 @@ main {
 
   font-size: 21px;
   font-weight: bold;
+  color: #000;
 }
 .hotel-search-name:hover {
   color: #81b3d2;
