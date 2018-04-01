@@ -16,6 +16,7 @@
               <li><a href='state-map.html'>Карта Штата</a></li>
               <li><a href='hotels.html'>Гостиницы</a></li>
           </ul>
+          <a href='index.html' class='top-logo'></a>
         </nav>
       </header>
     <main>
@@ -26,30 +27,36 @@
           <fieldset>
             <legend>Инфраструктура:</legend>
             <div>
-              <input  id='catalog-option-swimmingpool' type='checkbox' name='option-swimmingpool'>
+              <input  id='catalog-option-swimmingpool' type='checkbox' name='option-swimmingpool' class='visually-hidden'>
+              <span class='checkbox-indicator'></span>
               <label for='catalog-option-swimmingpool'>Бассейн</label>
             </div>
             <div>
-              <input  id='catalog-option-parking' type='checkbox' name='option-parking'>
+              <input  id='catalog-option-parking' type='checkbox' name='option-parking' class='visually-hidden'>
+              <span class='checkbox-indicator'></span>
               <label for='catalog-option-parking'>Парковка</label>
             </div>
             <div>
-              <input  id='catalog-option-wifi' type='checkbox' name='option-wifi'>
+              <input  id='catalog-option-wifi' type='checkbox' name='option-wifi' class='visually-hidden'>
+              <span class='checkbox-indicator'></span>
               <label for='catalog-option-wifi'>Wi-Fi</label>
             </div>
           </fieldset>
           <fieldset>
             <legend>Тип жилья:</legend>
             <div>
-              <input  id='catalog-type-hotel' type='checkbox' name='type-hotel'>
+              <input  id='catalog-type-hotel' type='checkbox' name='type-hotel' class='visually-hidden'>
+              <span class='checkbox-indicator'></span>
               <label for='catalog-type-hotel'>Гостиница</label>
             </div>
             <div>
-              <input  id='catalog-type-motel' type='checkbox' name='type-motel'>
+              <input  id='catalog-type-motel' type='checkbox' name='type-motel' class='visually-hidden'>
+              <span class='checkbox-indicator'></span>
               <label for='catalog-type-motel'>Мотель</label>
             </div>
             <div>
-              <input  id='catalog-type-appartment' type='checkbox' name='type-appartment'>
+              <input  id='catalog-type-appartment' type='checkbox' name='type-appartment' class='visually-hidden'>
+              <span class='checkbox-indicator'></span>
               <label for='catalog-type-appartment'>Апартаменты</label>
             </div>
           </fieldset>
@@ -109,7 +116,9 @@
               </div>
             </div>
             <div>
-              <span class='hotel-search-stars' aria-label='Количество звезд'><span class='visually-hidden'>4</span></span>
+              <span class='hotel-search-stars stars-4' aria-label='Количество звезд'>
+                <span class='visually-hidden'>4</span>
+              </span>
               <span class='hotel-search-rating'>Рейтинг: 8,5</span>
             </div>   
           </article>
@@ -129,7 +138,9 @@
               </div>
             </div>
             <div>
-                <span class='hotel-search-stars' aria-label='Количество звезд'><span class='visually-hidden'>3</span></span>
+                <span class='hotel-search-stars stars-3' aria-label='Количество звезд'>
+                  <span class='visually-hidden'>3</span>
+                </span>
                 <span class='hotel-search-rating'>Рейтинг: 8,9</span>
             </div>  
           </article>
@@ -149,7 +160,9 @@
               </div>
             </div>
             <div>
-                <span class='hotel-search-stars' aria-label='Количество звезд'><span class='visually-hidden'>2</span></span>
+                <span class='hotel-search-stars stars-2' aria-label='Количество звезд'>
+                  <span class='visually-hidden'>2</span>
+                </span>
                 <span class='hotel-search-rating'>Рейтинг: 9,2</span>
             </div>
           </article>

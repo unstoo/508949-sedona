@@ -11,15 +11,12 @@
     <header class='main-header'>
       <nav class='main-navigation'>
         <ul class='site-navigation'>
-          
             <li><a href='info.html'>Информация</a></li>
             <li><a href='photo-video.html'>Фото и Видео</a></li>
-  
-          
             <li><a href='state-map.html'>Карта Штата</a></li>
             <li><a href='hotels.html'>Гостиницы</a></li>
-          
         </ul>
+        <a disabled class='top-logo'></a>
       </nav>
       <div class='intro-logo'>
         <img src='img/intro.jpg' width='1200' height='513' alt='SEDONA Canyon Logo'>
@@ -136,17 +133,25 @@
     </footer>
 
     
-    <form class='booking-form visually-hidden' action='https://echo.htmlacademy.ru/' method='post'>
+    <form id='form' class='booking-form' action='https://echo.htmlacademy.ru/' method='post'>
       <fieldset>
         <legend class='visually-hidden'>Поск гостиницы в седоне</legend>
         <div>
           <div class='date-group'>
             <label for='booking-start-date-field'>Дата заезда:</label>
-            <input  id='booking-start-date-field' type='date' name='start-date'>
+            <input  id='booking-start-date-field' type='date' name='start-date' 
+              placeholder="ДД МЕСЯЦ ГОД"
+              data-js='input'>
+            <div class="calendar-icon" 
+              data-js='unhide_me'></div>
           </div>
           <div class='date-group'>
             <label for='booking-end-date-field'>Дата выезда:</label>
-            <input  id='booking-end-date-field' type='date' name='end-date'>
+            <input  id='booking-end-date-field' type='date' name='end-date'
+              placeholder="ДД МЕСЯЦ ГОД"
+              data-js='input'>
+            <div class="calendar-icon"  
+              data-js='unhide_me'></div>
           </div>
         </div>
         
@@ -154,14 +159,14 @@
           <div class='number-group'>
               <label for='booking-adults-count'>Взрослые:</label>
             <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество взрослых</span></button>
-            <input  id='booking-adults-count' name='adults-count' type='text'>
+            <input  id='booking-adults-count' name='adults-count' type='text' value='0' onfocus="(console.log(371))">
             <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество взрослых</span></button>
           </div>
           
           <div class='number-group'>
               <label for='booking-kids-count'>Дети:</label>
             <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество детей</span></button>
-            <input  id='booking-kids-count' name='kids-count' type='text'>
+            <input  id='booking-kids-count' name='kids-count' type='text' value='0'>
             <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество детей</span></button>
           </div>
       </div>
