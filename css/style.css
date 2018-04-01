@@ -26,7 +26,15 @@ a {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.main-header {
+  padding-left: 73px;
+  padding-right: 73px;
+  background-color: #fff;
+  position: relative;
+}
+
 .main-navigation a  {
+  box-sizing: border-box;
   font-weight: bold;
   color: #000000;
 }
@@ -40,7 +48,9 @@ a {
   opacity: .3;
 }
 
-.site-navigation {
+.main-navigation {
+  padding-bottom: 3px;
+    box-sizing: border-box;
   margin: 0;
   list-style-type: none;
   position: relative;
@@ -57,32 +67,43 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 57px;
-  padding-left: 72px;
-  padding-right: 72px;
+  height: 57px;
   
 }
+.main-navigation a:nth-child(2)  {
+  padding-left: 10px;
+}
+.main-navigation a:nth-child(3) {
+  padding-right: 10px;
+  order: 2;
+  text-align: right;
+}
+.main-navigation a:nth-child(4) {
+  order: 3;
+  text-align: right;
+}
 .main-navigation .top-logo {
+  margin-top: 23px;
+  -ms-flex-order: 1;
+  order: 1;
   content: '';
-  height: 70px;
-  width: 138px;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  margin-left: -69px;
-
-  background-image: url('../img/logo-top.png');
+  /* height: 85px;
+  width: 138px; */
+  position: relative;
+  z-index: 3;
+  /* z-index: 3;
+  background-image: url(../img/logo-top.png);
   background-repeat: no-repeat;
-  background-position: 0 0;
-
+  background-position: -15px 0;
+  background-position: 0px;
+  background-position-y: 15px; */
 }
 .main-navigation .top-logo:active {
   opacity: 1;
 }
 
-.site-navigation > li {
-  width: 241px;
-  padding-bottom: 3px;
+.main-navigation > a {
+  width: 135px;
 }
 
 .site-navigation li:nth-child(2) {
@@ -94,9 +115,11 @@ a {
 }
 
 .intro-logo {
+  left: -73px;
   height: 513px;
   width: 1200px;
   background-color: #a6c6dc;
+  position: relative;
 }
 
 main {
@@ -223,6 +246,7 @@ main {
   padding-top: 60px;
   padding-bottom: 82px;
   padding-left: 73px;
+  padding-right: 60px
 }
 .sedona-pros-sublist p {
   margin: 0;
@@ -239,7 +263,7 @@ main {
 }
 .sedona-pros-sublist li:nth-child(1) {
   width: 255px;
-  margin-right: 74px;
+  margin-right: 72px;
 }
 .sedona-pros-sublist li:nth-child(1)::after {
   content: '';
@@ -350,6 +374,8 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-left: 73px;
+  padding-right: 73px;
 }
 .hide-form-wrapper {
   position: absolute;
@@ -415,6 +441,8 @@ main {
 }
 
 .main-footer {
+  padding-left: 73px;
+  padding-right: 73px;
   min-height: 120px;
   background: rgba(255,255,255,.9);
   display: -webkit-box;
@@ -428,7 +456,9 @@ main {
           justify-content: space-between;
 }
 .main-footer > div {
-  width: 400px;
+  box-sizing: border-box;
+  width: 240px;
+  padding-bottom: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,6 +468,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.main-footer > div:nth-child(1)  {
+  padding-left: 13px;
+}
+.main-footer > div:nth-child(2)  {
+  width: 400px;
+}
+.main-footer > div:nth-child(3)  {
+  padding-right: 15px;
 }
 
 .booking-form {
@@ -781,8 +820,48 @@ main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+
+
+
+
+.range-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
 .form-right-chunk input[type='range'] {
   cursor: pointer;
+}
+
+.bar-1 {
+  width: 310px;
+  height: 2px;
+  background:rgba(255, 255, 255, 0.4);
+}
+
+.bar-2 {
+  height: 2px;
+  width: 82%; 
+  background: #fff
+}
+.handle {
+   position: absolute;
+   top: -9px;
+   width: 4px;
+   height: 4px;
+
+   background :#ababab;
+   border: 8px solid #fff;
+   border-radius: 50%;
+   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+   cursor: pointer;
+  }
+.handle:first-child {
+  left: 0;
+}
+.handle:last-child {
+  left: 252px;
 }
 
 .minmax-group {
@@ -1185,4 +1264,12 @@ a.filter-selected {
 }
 .social-links > li:last-child {
   margin-right: 0;
+}
+
+.filter-button {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 0;
+  left: 50%;
 }

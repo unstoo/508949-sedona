@@ -10,14 +10,14 @@
   <body class='catalog-page'>
     <header class='main-header'>
         <nav class='main-navigation'>
-          <ul class='site-navigation'>
-              <li><a href='info.html'>Информация</a></li>
-              <li><a href='photo-video.html'>Фото и Видео</a></li>
-              <li><a href='state-map.html'>Карта Штата</a></li>
-              <li><a href='hotels.html'>Гостиницы</a></li>
-          </ul>
-          <a href='index.html' class='top-logo'></a>
-        </nav>
+        
+            <a href='info.html'>Информация</a>
+            <a href='photo-video.html'>Фото и Видео</a>
+            <a href='state-map.html'>Карта Штата</a>
+            <a href='catalog.html'>Гостиницы</a>
+        
+        <a class='top-logo'><img src='img/logo-top.png' width='' height=''></a>
+      </nav>
       </header>
     <main>
       <h1 class='visually-hidden'>Результат поиска жилья</h1>
@@ -83,8 +83,15 @@
               </div>
             </div>
             <div class='form-range-input'>
-              <input id='catalog_price_min' name='price-min' type='range' min='0' max='10000' value='0'>
-              <input id='catalog_price_max' name='price-max' type='range' min='0' max='10000' value='10000'>
+              <!-- <input id='catalog_price_min' name='price-min' type='range' min='0' max='10000' value='0'>
+              <input id='catalog_price_max' name='price-max' type='range' min='0' max='10000' value='10000'> -->
+              <div class="range-wrapper">
+                  <div class="bar-1">
+                    <div class="bar-2"></div>
+                  </div>
+                  <div class="handle"></div>
+                  <div class="handle"></div>
+                </div>
             </div>
           </fieldset>
           <button class='catalog-search-button' type='submit'>Показать</button>
