@@ -268,6 +268,10 @@ main {
   padding-top: 45px;
   padding-bottom: 55px;
   width: 400px;
+
+  /* тут прячется .booking-form */
+  position: relative;
+  z-index: 3;
 }
 .last-three-pros h3 {
   margin-bottom: 23px;
@@ -286,6 +290,9 @@ main {
 
 .booking-section {
   text-align: center;
+
+  
+  position: relative;
   box-sizing: border-box;
   min-height: 291px;
   padding-top: 50px;
@@ -294,21 +301,37 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+.hide-form-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 2; 
+}
 .booking-section p {
   margin: 0;
   padding-bottom: 24px;
   font-size: 14px;
   line-height: 24px;
+
+  position: relative;
+  z-index: 3;
 }
 .booking-section b {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
+
+  position: relative;
+  z-index: 3;
 }
 
 .button {
   font-family: "PT Sans", "Arial", sans-serif;
 }
+
 .big-brown-button {
   background-color: #766357;
 
@@ -322,6 +345,8 @@ main {
   margin-bottom: 0;
   width: 568px;
   height: 86px;
+  position: relative;
+  z-index: 2;
 }
 
 .big-brown-button:hover {
@@ -356,10 +381,9 @@ main {
 .booking-form {
   color: #000000;
   font-weight: bold;
-
- 
-}
-.booking-form fieldset {
+  position: absolute;
+  top: 291px;
+  left: 316px;
   box-sizing: border-box;
   margin: 0;
   border: none;
@@ -368,7 +392,21 @@ main {
   padding: 55px;
   background: #fff;
   box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, .15);
-
+  z-index: 0;
+  transition: height 1s;
+  transition: top 1s;
+}
+.form-hidden {
+  top: -130px;
+  transition: height 1s;
+  transition: top 1s;
+}
+.from-hidden > * {
+  height: 0px;
+}
+.booking-form fieldset {
+  margin: 0;
+  border: none;
 }
 
 .date-group {

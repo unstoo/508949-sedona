@@ -14,7 +14,7 @@
             <li><a href='info.html'>Информация</a></li>
             <li><a href='photo-video.html'>Фото и Видео</a></li>
             <li><a href='state-map.html'>Карта Штата</a></li>
-            <li><a href='hotels.html'>Гостиницы</a></li>
+            <li><a href='catalog.html'>Гостиницы</a></li>
         </ul>
         <a disabled class='top-logo'></a>
       </nav>
@@ -92,20 +92,57 @@
       </section>    
 
       <section class='booking-section'>
+        <div class="hide-form-wrapper"></div>
         <h2 class='visually-hidden'>Hotels booking</h2>
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <button class='big-brown-button button'>Поиск гостиницы в Седоне</button>
+        <button id='form-button' class='big-brown-button button'>Поиск гостиницы в Седоне</button>
+        <form id='form' class='booking-form' action='https://echo.htmlacademy.ru/' method='post'>
+          <fieldset>
+            <legend class='visually-hidden'>Поск гостиницы в седоне</legend>
+            <div>
+              <div class='date-group'>
+                <label for='booking-start-date-field'>Дата заезда:</label>
+                <input  id='booking-start-date-field' type='date' name='start-date' 
+                  placeholder="ДД МЕСЯЦ ГОД">
+                <div class="calendar-icon visually-hidden"></div>
+              </div>
+              <div class='date-group'>
+                <label for='booking-end-date-field'>Дата выезда:</label>
+                <input  id='booking-end-date-field' type='date' name='end-date'
+                  placeholder="ДД МЕСЯЦ ГОД">
+                <div class="calendar-icon visually-hidden"></div>
+              </div>
+            </div>
+            
+            <div class='number-group-parent'>
+              <div class='number-group'>
+                  <label for='booking-adults-count'>Взрослые:</label>
+                <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество взрослых</span></button>
+                <input  id='booking-adults-count' name='adults-count' type='text' value='0'>
+                <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество взрослых</span></button>
+              </div>
+              
+              <div class='number-group'>
+                  <label for='booking-kids-count'>Дети:</label>
+                <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество детей</span></button>
+                <input  id='booking-kids-count' name='kids-count' type='text' value='0'>
+                <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество детей</span></button>
+              </div>
+          </div>
+          <button class='big-blue-button' type='submit'>Найти</button>
+          </fieldset>
+        </form>
       </section>
+
       <figure class='google-map'>
         <img src='img/google-map.jpg' width='1200' height='473' alt='US, Arizona, Sedona. Coordinates: 34°51′36″N 111°47′21″W'>
       </figure>
     </main>
     <footer class='main-footer'>
       <div class='hashtag'>#VISITSEDONA</div>
-
       <div>
         <ul class='social-links'>
           <li><a class='social-icon' href='#'>
@@ -133,46 +170,7 @@
     </footer>
 
     
-    <form id='form' class='booking-form' action='https://echo.htmlacademy.ru/' method='post'>
-      <fieldset>
-        <legend class='visually-hidden'>Поск гостиницы в седоне</legend>
-        <div>
-          <div class='date-group'>
-            <label for='booking-start-date-field'>Дата заезда:</label>
-            <input  id='booking-start-date-field' type='date' name='start-date' 
-              placeholder="ДД МЕСЯЦ ГОД"
-              data-js='input'>
-            <div class="calendar-icon" 
-              data-js='unhide_me'></div>
-          </div>
-          <div class='date-group'>
-            <label for='booking-end-date-field'>Дата выезда:</label>
-            <input  id='booking-end-date-field' type='date' name='end-date'
-              placeholder="ДД МЕСЯЦ ГОД"
-              data-js='input'>
-            <div class="calendar-icon"  
-              data-js='unhide_me'></div>
-          </div>
-        </div>
-        
-        <div class='number-group-parent'>
-          <div class='number-group'>
-              <label for='booking-adults-count'>Взрослые:</label>
-            <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество взрослых</span></button>
-            <input  id='booking-adults-count' name='adults-count' type='text' value='0' onfocus="(console.log(371))">
-            <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество взрослых</span></button>
-          </div>
-          
-          <div class='number-group'>
-              <label for='booking-kids-count'>Дети:</label>
-            <button class='decrement-button' type='button'><span class='visually-hidden'>Уменшить количество детей</span></button>
-            <input  id='booking-kids-count' name='kids-count' type='text' value='0'>
-            <button class='increment-button' type='button'><span class='visually-hidden'>Увеличить количество детей</span></button>
-          </div>
-      </div>
-
-        <button class='big-blue-button' type='submit'>Найти</button>
-      </fieldset>
-    </form>
+    
+    <script src="js/script.js"></script>
   </body>
 </html>
